@@ -31,20 +31,28 @@
                 algoritmo exclusivo, de cual puede ser tu nueva vida. <br>
                 ¿Estas preparado para ver tu futuro?</p>
             <div class="simulador">
-                <form class="simulador" action="servicios_fake.html" method="get">
-                    <label for="pack"><span>1</span>Elige</label>
-                    <select title="eleccion" name="pack">
-                        <option value="daIguaL">Pack Famoso</option>
-                        <option value="daLoMismo">Pack Mocatriz</option>
-                        <option value="noImporta">Pack Influencer</option>
-                        <option value="queMasDa">Pack Gurú</option>
-                    </select>
-                    <span>2</span>Sube<label for="foto" class="oculta">Elige tu foto</label>
-                    <input type="file" name="foto">
-                    <label for="adelante"><span>3</span>Mira</label>
-                    <input name="adelante" type="submit" value="Adelante!">
-                </form>
-                <div id="origen"></div>
+                
+                    <form class = "simulador" action="servicios_fake.html" method="get">
+                        <div class="election">
+                            <p><label for="pack">Elige tu pack</label></p>
+                            <select title="eleccion" name="pack">
+                                <option value="daIguaL">Pack Famoso</option>
+                                <option value="daLoMismo">Pack Mocatriz</option>
+                                <option value="noImporta">Pack Influencer</option>
+                                <option value="queMasDa">Pack Gurú</option>
+                            </select>
+                        </div>
+                        <div class="election">
+                            <p><label>Sube tu foto</label></p>
+                            <label for="foto" class="label">Elige tu foto</label>
+                            <input type="file" name="foto" id="foto" required >
+                        </div>
+                        <div class="election">
+                            <p><label for="adelante">Mira el resultado</label></p>
+                            <input name="adelante" type="submit" value="Adelante!">
+                        </div>
+                    </form>
+                
                 <div id="origen"></div>
             </div>
         </div>
@@ -54,9 +62,9 @@
     <footer>
         &#9400 Antonio Lozano García 2023
         <ul>
-            <li><a href="http://#"><img src="/resources/twitter.png" alt="Twitter"></a></li>
-            <li><a href="http://#"><img src="/resources/insta.png" alt="Instagram"></a></li>
-            <li><a href="http://#"><img src="/resources/facebook.png" alt="Facebook"></a></li>
+            <li><a href="#"><img src="/resources/twitter.png" alt="Twitter"></a></li>
+            <li><a href="#"><img src="/resources/insta.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="/resources/facebook.png" alt="Facebook"></a></li>
         </ul>
     </footer>
 </body>
