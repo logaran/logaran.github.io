@@ -132,6 +132,17 @@ a {
 
 }
 
+p > a {
+    color:#FFEF00;
+}
+p > a:hover {
+    letter-spacing: 10px;
+    background-color: whitesmoke;
+    color: black;
+    border: #FFEF00 2px;
+    font-weight: 800;
+}
+
 .active {
     color: black;
     background-color: whitesmoke;
