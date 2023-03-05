@@ -76,9 +76,20 @@ footer img {
 }
 
 .ficha {
-    width: 30vh;
+    width: 24%;
     margin: 5px;
     overflow: hidden;
+}
+.map {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+        
+}
+.formulario{
+    width: 50%;
 }
 
 video {
@@ -90,6 +101,19 @@ video {
     size: cover;
 }
 
+.world {
+    max-width: 27%;
+    min-width: 400px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 35px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.map>div{
+    max-width: 70%;
+    flex-grow: 2;
+}
 .ficha h3 {
     font-size: large;
     font-weight: 300;
@@ -164,7 +188,7 @@ ul.menu li a:hover {
 
 .bloque {
     width: 90%;
-    margin-top: 25px;
+    margin-top: 5px;
     font-size: x-large;
     color: azure;
 
@@ -248,7 +272,15 @@ table.responsive td {
     display: block;
     width: 100%;
     padding: 15px;
+    height: 20em;
 
+}
+table.responsive td:nth-last-child(2){
+    height: 6em;
+}
+
+table.responsive td:last-child{
+    height: 7em;
 }
 
 table.responsive div {
@@ -300,38 +332,46 @@ div.price {
     font-size: 1.2em !important;
     color: #FFEF00;
     width: 100%;
-    line-height: 2em;
-
+    height: 100px !important;
 }
 
-button,
-input,
-select, .label {
-    width: 175px;
-    height: 2.5em;
+button, select, .label_fake, input[Type="submit"] {
+    width: 100%;
+    height: 2em;
     background-color: #FFEF00;
     color: black;
     font-size: large;
     text-align: center;
     vertical-align: middle;
-    line-height: 2.5em;
     border-radius: 5px;
     transition: all 500ms;
     cursor: pointer;
 }
 
-label{
+.label_fake{
     display: inline-block;
-    
-    }
-
-button {
+    padding-top: 6px;
+    font-size: 20px;    
+}
+input, textarea {
     width: 100%;
+    padding: 5px;
+    
 }
 
+textarea{
+    min-height: 139px;
+    resize: none;
+}
 
+label{
+    min-width: 100%;
+    margin-bottom: 0.2em;
+    
+    }
+    
 button:hover {
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     box-shadow: 0px 0px 10px #FFEF00;
 }
 
@@ -349,15 +389,37 @@ button:hover {
 .election {
     min-width: 100px;
 }
+.foto {
+animation: letrasguay 1.5s infinite alternate;
+}
+.foto:hover .oculta {
+display: block;
+visibility: visible;
+left: 50%;
+top: 50%;
+margin-left: -225px;
+margin-top: -250px;
+}
+
+.oculta {
+    display: none;
+    position: fixed;
+    width: 450px;
+    height: 280px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 100px#FFEF00;
+    transition: all 10s;
+    }
 
 #origen, #destino {
     background-attachment: scroll;
     background-repeat: no-repeat;
     overflow: hidden;
-    background-size: cover;
+    background-size: contain;
     margin: 25px auto;
-    width: 500px;
-    height: 600px;
+    height: 90vh;
+    width: 60%;
+    background-position: center center;
 }
 
 #origen {
@@ -368,6 +430,24 @@ button:hover {
     background-image: url(/resources/noise.gif);
     animation: generando 2s ease-out 1s 1 forwards;
     border-radius: 15px;
+}
+
+@keyframes letrasguay {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow:
+          0 0 4px #fff,
+          0 0 11px #fff,
+          0 0 19px #fff,
+          0 0 40px #0fa,
+          0 0 80px #0fa,
+          0 0 90px #0fa,
+          0 0 100px #0fa,
+          0 0 150px #0fa;
+      }
+      20%, 24%, 55% {       
+        text-shadow: none;
+      }
+    
 }
 
 @keyframes generando {
@@ -394,20 +474,46 @@ input[type="file"] {
     border-radius: 50px;
 }
 
-.simulador form {
+.simulador >form {
     width: 100%;
     border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+fieldset{
+    border: whitesmoke 1px solid;
+    border-radius: 5px;
+    width: 100%;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+form div {
+    flex-grow: 1;
+    margin: 10px;
+}
+.fieldmain {
+    width: 66%;
+    margin: 10px;
+    
 }
 
 @media (max-width:1024px) {
     table.responsive tr {
         max-width: 32%;
     }
+    .formulario{
+        min-width: 100%;
+    }
 }
 
 @media (max-width:720px) {
     table.responsive tr {
         max-width: 49%;
+    }
+    .formulario{
+        min-width: 100%;
     }
 
     .menu {
@@ -442,6 +548,9 @@ input[type="file"] {
 @media (max-width:520px) {
     table.responsive tr {
         max-width: 100%;
+    }
+    .formulario{
+        min-width: 100%;
     }
 
 
