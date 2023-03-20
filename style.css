@@ -77,7 +77,7 @@ footer img {
 }
 
 .ficha {
-    width: 24%;
+    max-width: 24%;
     margin: 5px;
     overflow: hidden;
 }
@@ -507,6 +507,13 @@ form div {
     .formulario{
         min-width: 100%;
     }
+    .ficha {
+        max-width: 30%;
+    
+    }
+    p{
+        font-size: 0.8em;
+    }
 }
 
 @media (max-width:720px) {
@@ -515,6 +522,10 @@ form div {
     }
     .formulario{
         min-width: 100%;
+    }
+    .ficha {
+        max-width: 40%;
+     
     }
 
     .menu {
@@ -549,6 +560,10 @@ form div {
 @media (max-width:520px) {
     table.responsive tr {
         max-width: 100%;
+    }
+    .ficha {
+        max-width: 100%;
+        margin: auto;
     }
     .formulario{
         min-width: 100%;
